@@ -20,7 +20,7 @@ mount /dev/sdc1 /mnt/usb2
 
 #Copy all pdf from run folder to the destination drives
 cp *.pdf /mnt/usb1
-cp *.pdf  /mnt/usb2
+cp *.pdf /mnt/usb2
 
 echo "md5sum of original files"
 md5sum *.pdf
