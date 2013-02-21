@@ -19,12 +19,14 @@ mount /dev/sdb1 /mnt/usb1
 mount /dev/sdc1 /mnt/usb2
 
 #Copy all pdf from run folder to the destination drives
-cp *.pdf $f
+cp *.pdf /mnt/usb1
+cp *.pdf  /mnt/usb2
 
 echo "md5sum of original files"
 md5sum *.pdf
 echo "md5sum of destination files"
-md5sum $f/*.pdf
+md5sum /mnt/usb1/*.pdf
+md5sum /mnt/usb2/*.pdf
 
 # Unmount the USB sticks
 umount /mnt/usb1
